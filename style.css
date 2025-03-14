@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Khula', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #16D9E3;
+}
+
+.start {
+    font-size: 1.5rem;
+}
+
+h1 {
+    line-height: 1.4;
+    font-size: 4rem;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100Vw;
+    transition: margin 0.5s ease-out;
+    background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+.time-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.time-list li {
+    margin: 10px;
+}
+
+.time-btn {
+    background-color: transparent;
+    border: 2px solid #C0C0C0;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+}
+
+.time-btn:hover {
+    background-color: 2px solid #16D9E3;
+    color: #16D9E3;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.primary {
+    color:#16D9E3;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90vw;
+    height: 90vw;
+    max-width: 500px;
+    max-height: 500px;
+    background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
+    box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.circle {
+    background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: min(10vw, 50px);
+    height: min(10vw, 50px);
+}
+
+.circle:hover {
+    transform: scale(1.2);
+}
+
+.best-score {
+    font-size: 1.5rem;
+    color: #FFD700;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+    display: block;
+}
+
+.restart {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(90deg, #0e557e, #04206b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.restart:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .time-btn {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .board {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .score-container {
+        gap: 0px;
+    }
+}
